@@ -1,0 +1,29 @@
+library(ggplot2)
+> ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) + 
++     geom_point()
+> ggplot(data = iris, aes(x = Sepal.Length)) + 
++     geom_histogram(binwidth = 0.1, fill = "skyblue", color = "black")
+> 
+> ggplot(data = diamonds, aes(x = cut)) + 
++     geom_bar(fill = "steelblue") + 
++     theme(axis.text.x = element_text(angle = 45, hjust = 1))
+> 
+> ggplot(data = economics, aes(x = date, y = psavert)) + 
++     geom_line(color = "red") + 
++     labs(x = "Year", y = "Personal Savings Rate")
+> 
+> ggplot(data = iris, aes(x = Species, y = Sepal.Length)) + 
++     geom_boxplot(fill = "lightgreen") + 
++     labs(x = "Species", y = "Sepal Length")
+> 
+> # Using ggplot2
+> ggplot(data = mpg, aes(x = class, y = manufacturer, fill = hwy)) + 
++     geom_tile() + 
++     scale_fill_gradient(low = "white", high = "blue")
+> 
+> # Using heatmaply
+> heatmaply::heatmaply(as.matrix(iris[, 1:4]), xlab = "Features", ylab = "Observations")
+Error in loadNamespace(x) : there is no package called ‘heatmaply’
+> ggplot(data = iris, aes(x = Species, y = Sepal.Length)) + 
++     geom_violin(fill = "lightblue") + 
++     labs(x = "Species", y = "Sepal Length")
